@@ -51,6 +51,6 @@ pip install -r requirements.txt
 # 4. Run the app
 uvicorn app.main:app --reload
 ## Live Deployment
-**URL:** [https://prefabric_26-2.onrender.com] 
+**URL:** https://prefabric-26-3.onrender.com/analyze 
 
 **Platform:** Render.com
