@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prefab Decision Support Engine</title>
+</head>
+<body>
+
+<h2>Prefab Decision Support Engine</h2>
+
+<form action="/analyze" method="post">
+    <input name="structure_type" placeholder="Structure type" required><br><br>
+
+    <input type="number" step="0.1" name="width_m" placeholder="Width (m)" required><br><br>
+    <input type="number" step="0.1" name="depth_m" placeholder="Depth (m)" required><br><br>
+    <input type="number" step="0.1" name="height_m" placeholder="Height (m)" required><br><br>
+
+    <input name="material" placeholder="Material" required><br><br>
+
+    <select name="priority">
+        <option value="cost">Minimize Cost</option>
+        <option value="waste">Minimize Waste</option>
+        <option value="speed">Faster Assembly</option>
+    </select><br><br>
+
+    <button type="submit">Run Analysis</button>
+</form>
+
+{% if result %}
+<hr>
+<h3>Analysis Result</h3>
+
+<p><b>Risk Level:</b> {{ result.risk_level }}</p>
+<p><b>Waste Ratio:</b> {{ result.waste_ratio }}</p>
+
+<h4>Cut List (m²)</h4>
+<ul>
+{% for key, value in result.cut_list.items() %}
+    <li>{{ key }} : {{ value }}</li>
+{% endfor %}
+</ul>
+
+<p>{{ result.notes }}</p>
+{% endif %}
+
+</body>
+</html>
