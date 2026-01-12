@@ -25,7 +25,6 @@ US-oriented, liability-aware, decision-support only.
 ## 🏗️ prefabric_26 📁 Project Structure
 
 ```
-Folder Structure
 prefabric_26/
 ├── app/
 │   ├── __init__.py
