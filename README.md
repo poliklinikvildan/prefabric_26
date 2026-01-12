@@ -22,7 +22,10 @@ This software is strictly decision-support.
 
 US-oriented, liability-aware, decision-support only.
 
-## prefabric_26 Folder Structure
+## 🏗️ prefabric_26 📁 Project Structure
+
+```
+Folder Structure
 prefabric_26/
 ├── app/
 │   ├── __init__.py
@@ -37,7 +40,7 @@ prefabric_26/
 ├── README.md
 ├── deploy.md
 └── requirements.txt
-
+```
 ## Quick Setup for VS Code on Your PC
 Download the prefabric_26 folder.
 Open it in VS Code.
